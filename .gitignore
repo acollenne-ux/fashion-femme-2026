@@ -2,3 +2,13 @@
 rapport.html
 __pycache__/
 *.pyc
+
+# Fichiers de debug/test
+debug_pages.pdf
+check_v2.pdf
+pdf_viewer.html
+full_page.png
+v2_*.png
+pg*.png
+real_pg*.png
+page_*.png
