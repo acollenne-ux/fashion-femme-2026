@@ -37,7 +37,7 @@ IMAGES = {
 }
 
 CSS = """
-@page { size: A4; margin: 25mm 22mm 20mm 22mm; }
+@page { size: A4; margin: 5mm 4.4mm 4mm 4.4mm; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; background: #fff; }
 
@@ -47,7 +47,7 @@ body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; backgro
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: #fff; text-align: center; page-break-after: always;
     position: relative; overflow: hidden;
-    margin: -25mm -22mm 0 -22mm;
+    margin: -5mm -4.4mm 0 -4.4mm;
 }
 .cover::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
