@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "High fashion photography, young woman in a silk slip dress with cowl neckline, liquid satin fabric catching light, deep burgundy lava falls color, minimalist 90s inspired silhouette, evening elegance, dramatic studio lighting, sleek and sensual, editorial magazine quality, SS26 evening trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "slip_dress_satin_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img9\\slip_dress_satin_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956564664,
+      "time_ms": 6925,
+      "status": "success",
+      "size_bytes": 1000097
+    }
+  ],
+  "timestamp": "2026-04-10T01:41:04.988786"
+}

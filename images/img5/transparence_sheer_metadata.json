@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Fashion editorial photo, young woman wearing sheer transparent layered outfit, see-through mesh top over bralette with high-waisted wide leg trousers, ethereal and modern, soft neutral tones, cloud dancer white, sophisticated layering, professional fashion photography, SS26 trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "transparence_sheer_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img5\\transparence_sheer_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956555484,
+      "time_ms": 5107,
+      "status": "success",
+      "size_bytes": 1316183
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:54.006778"
+}

@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Editorial fashion photography, young woman wearing a flowing romantic sheer organza blouse with delicate lace details, soft lingerie-inspired styling, pastel pink tones, high-end fashion magazine look, natural daylight, elegant and feminine, professional studio lighting, haute couture quality, SS26 runway trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "romantisme_lingerie_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img1\\romantisme_lingerie_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956541046,
+      "time_ms": 4184,
+      "status": "success",
+      "size_bytes": 1486216
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:38.626080"
+}

@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "High-end fashion photography, young woman in preppy reinvented style, pleated mini skirt with polo shirt tucked in, varsity cardigan draped on shoulders, pastel blue and white color scheme, college chic aesthetic, clean bright lighting, editorial quality, SS26 fashion trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "preppy_reinvente_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img4\\preppy_reinvente_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956553617,
+      "time_ms": 3930,
+      "status": "success",
+      "size_bytes": 964956
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:51.075535"
+}

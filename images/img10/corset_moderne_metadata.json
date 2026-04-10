@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Luxury fashion editorial, young woman wearing a structured corset top over flowing palazzo pants, modern bustier styling, architectural fashion, black and white color contrast, powerful feminine silhouette, professional studio lighting, high contrast dramatic image, haute couture quality, SS26 corsetry trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "corset_moderne_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img10\\corset_moderne_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956568144,
+      "time_ms": 6592,
+      "status": "success",
+      "size_bytes": 1480206
+    }
+  ],
+  "timestamp": "2026-04-10T01:41:08.167324"
+}

@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Fashion editorial photo, young woman in crochet handmade dress, intricate open-knit pattern, boho luxe aesthetic, natural cream and ivory colors, artisanal craftsmanship visible, beach resort setting, golden hour sunlight, relaxed elegance, high fashion quality, SS26 artisan trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "crochet_artisanal_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img8\\crochet_artisanal_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956562101,
+      "time_ms": 6934,
+      "status": "success",
+      "size_bytes": 1581595
+    }
+  ],
+  "timestamp": "2026-04-10T01:41:02.487062"
+}

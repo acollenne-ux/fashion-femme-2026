@@ -1,0 +1,4 @@
+# Fichiers intermediaires
+rapport.html
+__pycache__/
+*.pyc

@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "High fashion editorial photo, young woman in an oversized structured blazer with wide shoulders, power tailoring, cream and beige tones, minimalist quiet luxury aesthetic, clean lines, professional fashion photography, Vogue style, modern sophisticated woman, SS26 trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "tailoring_oversize_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img2\\tailoring_oversize_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956544150,
+      "time_ms": 3660,
+      "status": "success",
+      "size_bytes": 887990
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:41.209093"
+}

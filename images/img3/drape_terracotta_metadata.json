@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Fashion editorial photograph, young woman wearing a flowing maxi dress with dramatic draped fabric in terracotta and burnt orange tones, Mediterranean summer vibe, windswept movement, golden hour lighting, elegant resort wear, high fashion photography, SS26 runway trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "drape_terracotta_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img3\\drape_terracotta_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956546793,
+      "time_ms": 4063,
+      "status": "success",
+      "size_bytes": 1347946
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:44.246415"
+}

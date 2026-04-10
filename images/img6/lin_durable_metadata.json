@@ -1,0 +1,25 @@
+{
+  "provider": "huggingface",
+  "space": "black-forest-labs/FLUX.1-schnell",
+  "prompt": "Luxury fashion editorial, young woman in a complete linen suit, relaxed fit blazer with matching wide-leg pants, natural undyed beige linen fabric, sustainable fashion aesthetic, summer Mediterranean setting, effortless elegance, warm natural lighting, high fashion photography, SS26 sustainable trend",
+  "negative_prompt": null,
+  "params": {
+    "steps": 4,
+    "cfg_scale": 0.0,
+    "width": 1024,
+    "height": 1024
+  },
+  "variants": [
+    {
+      "file": "lin_durable_v1.png",
+      "path": "C:\\tmp\\fashion-femme-2026\\images\\img6\\lin_durable_v1.png",
+      "provider": "huggingface",
+      "space": "black-forest-labs/FLUX.1-schnell",
+      "seed": 1956558184,
+      "time_ms": 5397,
+      "status": "success",
+      "size_bytes": 1612428
+    }
+  ],
+  "timestamp": "2026-04-10T01:40:57.027340"
+}
