@@ -37,7 +37,7 @@ IMAGES = {
 }
 
 CSS = """
-@page { size: A4; margin: 0; }
+@page { size: A4; margin: 25mm 22mm 20mm 22mm; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; background: #fff; }
 
@@ -47,6 +47,7 @@ body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; backgro
     display: flex; flex-direction: column; justify-content: center; align-items: center;
     color: #fff; text-align: center; page-break-after: always;
     position: relative; overflow: hidden;
+    margin: -25mm -22mm 0 -22mm;
 }
 .cover::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
@@ -58,9 +59,13 @@ body { font-family: 'Georgia', 'Times New Roman', serif; color: #1a1a1a; backgro
 .cover .line { width: 80px; height: 1px; background: #c4a882; margin: 20px auto; z-index: 1; }
 .cover .date { font-size: 13px; color: #777; margin-top: 30px; z-index: 1; }
 
+/* Flow continu - pas de height fixe, Chromium pagine automatiquement */
 .page {
-    width: 210mm; min-height: 297mm; padding: 25mm 22mm 20mm 22mm;
-    page-break-after: always; position: relative;
+    position: relative;
+}
+/* Saut de page AVANT chaque nouveau chapitre */
+.chapter-start {
+    page-break-before: always;
 }
 .page-header {
     font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #c4a882;
@@ -144,9 +149,9 @@ tr {
 .source-list li { margin-bottom: 2px; }
 
 .footer {
-    position: absolute; bottom: 15mm; left: 22mm; right: 22mm;
     font-size: 9px; color: #bbb; text-align: center;
     border-top: 1px solid #eee; padding-top: 6px;
+    margin-top: 20px;
 }
 
 .sommaire { list-style: none; padding: 0; }
@@ -179,7 +184,7 @@ def build_html():
 </div>
 
 <!-- SOMMAIRE -->
-<div class="page">
+<div class="page chapter-start">
     <div class="page-header">Tendances Vestimentaires Femme &mdash; Ete 2026</div>
     <h2 class="section-title">Sommaire</h2>
     <div class="line" style="width:60px;height:1px;background:#c4a882;margin:12px 0 24px 0;"></div>
@@ -193,11 +198,10 @@ def build_html():
         <li><span class="num">07</span> Guide Styling &amp; Combinaisons <span style="color:#999">p.17</span></li>
         <li><span class="num">08</span> Sources <span style="color:#999">p.18</span></li>
     </ul>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Confidentiel</div>
 </div>
 
-<!-- PAGE 3 : SILHOUETTES -->
-<div class="page">
+<!-- SILHOUETTES -->
+<div class="page chapter-start">
     <div class="page-header">01 &mdash; Silhouettes &amp; Coupes</div>
     <div class="section-number">Chapitre 01</div>
     <h2 class="section-title">Silhouettes &amp; Coupes</h2>
@@ -236,12 +240,7 @@ def build_html():
         <div class="designers">Christopher John Rogers &bull; Schiaparelli &bull; Dior &bull; Dries Van Noten</div>
     </div>
 
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 3</div>
-</div>
-
-<!-- PAGE 4 : SILHOUETTES SUITE -->
-<div class="page">
-    <div class="page-header">01 &mdash; Silhouettes &amp; Coupes (suite)</div>
+    <!-- contenu silhouettes continue en flow -->
 
     <div class="trend-card">
         <h3>5. Le Body-Conscious Seducteur</h3>
@@ -288,11 +287,10 @@ def build_html():
             <tr><td>Cape/Cocoon</td><td>Enveloppant, drape</td><td>Valentino, Celine, Alaia</td></tr>
         </table>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 4</div>
 </div>
 
-<!-- PAGE 5 : COULEURS -->
-<div class="page">
+<!-- COULEURS -->
+<div class="page chapter-start">
     <div class="page-header">02 &mdash; Palette Chromatique</div>
     <div class="section-number">Chapitre 02</div>
     <h2 class="section-title">Palette Chromatique SS26</h2>
@@ -345,12 +343,7 @@ def build_html():
             <tr><td>Blancs</td><td>Cloud Dancer, White Onyx, Ether</td><td>Purete, calme</td></tr>
         </table>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 5</div>
-</div>
-
-<!-- PAGE 6 : COULEURS PANTONE DETAIL -->
-<div class="page">
-    <div class="page-header">02 &mdash; Palette Chromatique (suite)</div>
+    <!-- contenu couleurs continue en flow -->
 
     <h3>Top 10 Pantone &mdash; NYFW SS26</h3>
     <table>
@@ -391,11 +384,10 @@ def build_html():
         <tr><td>Amber Haze</td><td>Ambre dore envoutant</td><td>Ralentissement, regeneration</td></tr>
         <tr><td>Jelly Mint</td><td>Vert menthe bondissant</td><td>Kawaii, joie</td></tr>
     </table>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 6</div>
 </div>
 
-<!-- PAGE 7 : MATIERES -->
-<div class="page">
+<!-- MATIERES -->
+<div class="page chapter-start">
     <div class="page-header">03 &mdash; Matieres &amp; Tissus</div>
     <div class="section-number">Chapitre 03</div>
     <h2 class="section-title">Matieres &amp; Tissus</h2>
@@ -434,12 +426,7 @@ def build_html():
         <div class="designers">Valentino &bull; Simone Rocha &bull; Dolce &amp; Gabbana</div>
     </div>
 
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 7</div>
-</div>
-
-<!-- PAGE 8 : MATIERES SUITE -->
-<div class="page">
-    <div class="page-header">03 &mdash; Matieres &amp; Tissus (suite)</div>
+    <!-- contenu matieres continue en flow -->
 
     <div class="trend-card">
         <h3>5. Crochet &amp; maille ajouree</h3>
@@ -484,11 +471,10 @@ def build_html():
             <tr><td>7</td><td>Liquid denim</td><td>Pantalons, vestes</td><td>Bonne</td></tr>
         </table>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 8</div>
 </div>
 
-<!-- PAGE 9 : IMPRIMES -->
-<div class="page">
+<!-- IMPRIMES -->
+<div class="page chapter-start">
     <div class="page-header">04 &mdash; Imprimes &amp; Motifs</div>
     <div class="section-number">Chapitre 04</div>
     <h2 class="section-title">Imprimes &amp; Motifs</h2>
@@ -529,12 +515,7 @@ def build_html():
         <h3>7. Graphiques &amp; abstraits</h3>
         <p>Abstractions artistiques, coups de pinceau, glitchs numeriques, illusions optiques. L'imprime devient oeuvre d'art.</p>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 9</div>
-</div>
-
-<!-- PAGE 10 : IMPRIMES VISUEL -->
-<div class="page">
-    <div class="page-header">04 &mdash; Imprimes &amp; Motifs (visuels)</div>
+    <!-- contenu imprimes continue en flow -->
 
     <div class="two-images">
         <img src="{IMAGES['imprimes']}" alt="Imprimes bold">
@@ -554,11 +535,10 @@ def build_html():
         </table>
     </div>
 
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 10</div>
 </div>
 
-<!-- PAGE 11 : STYLES DOMINANTS -->
-<div class="page">
+<!-- STYLES DOMINANTS -->
+<div class="page chapter-start">
     <div class="page-header">05 &mdash; Styles Dominants</div>
     <div class="section-number">Chapitre 05</div>
     <h2 class="section-title">Styles Dominants &amp; Esthetiques</h2>
@@ -592,12 +572,7 @@ def build_html():
         <p>Le quiet luxury s'adoucit : il accepte des eclats de personnalite. Un bijou bold, un imprime inattendu, une texture surprenante. Blazers impeccables en tons neutres avec detail signature.</p>
         <div class="designers">Khaite &bull; Toteme &bull; Victoria Beckham &bull; The Row &bull; Burberry</div>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 11</div>
-</div>
-
-<!-- PAGE 12 : STYLES SUITE -->
-<div class="page">
-    <div class="page-header">05 &mdash; Styles Dominants (suite)</div>
+    <!-- contenu styles continue en flow -->
 
     <div class="img-section">
         <img src="{IMAGES['slip']}" alt="Slip dress satin">
@@ -638,12 +613,7 @@ def build_html():
         <p>La couleur explose de maniere deliberee et graphique. Blocs nets, associations inattendues (cobalt/tangerine, pistache/lilas). La couleur n'est plus decorative mais structurelle.</p>
         <div class="designers">Fendi &bull; Loewe &bull; Versace &bull; Dior &bull; Dries Van Noten</div>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 12</div>
-</div>
-
-<!-- PAGE 13 : STYLES VISUELS -->
-<div class="page">
-    <div class="page-header">05 &mdash; Styles Dominants (visuels)</div>
+    <!-- contenu styles visuels continue en flow -->
 
     <div class="two-images">
         <img src="{IMAGES['corset']}" alt="Corset power">
@@ -663,11 +633,10 @@ def build_html():
             <tr><td>Crochet</td><td>450M (#CrochetTop)</td><td>Festival au quotidien</td></tr>
         </table>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 13</div>
 </div>
 
-<!-- PAGE 14 : PIECES CLES -->
-<div class="page">
+<!-- PIECES CLES -->
+<div class="page chapter-start">
     <div class="page-header">06 &mdash; Pieces Cles</div>
     <div class="section-number">Chapitre 06</div>
     <h2 class="section-title">Pieces Cles de la Garde-Robe</h2>
@@ -710,12 +679,7 @@ def build_html():
         <div class="designers">Saint Laurent &bull; Chloe &bull; Magda Butrym &bull; Valentino</div>
         <p style="font-size:10px;color:#888;margin-top:4px;">Luxe 1 500-4 000 EUR | Accessible 30-80 EUR</p>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 14</div>
-</div>
-
-<!-- PAGE 15 : PIECES CLES SUITE -->
-<div class="page">
-    <div class="page-header">06 &mdash; Pieces Cles (suite)</div>
+    <!-- contenu pieces cles continue en flow -->
 
     <div class="two-images">
         <img src="{IMAGES['tailoring']}" alt="Blazer oversize">
@@ -759,12 +723,7 @@ def build_html():
         <p>Piece versatile : sous un pull, avec une jupe midi, ou seul. Coupe ajustee, manches courtes.</p>
         <div class="designers">Lacoste &bull; Ralph Lauren &bull; Miu Miu &bull; Celine</div>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 15</div>
-</div>
-
-<!-- PAGE 16 : PIECES CLES VISUELS -->
-<div class="page">
-    <div class="page-header">06 &mdash; Pieces Cles (visuels)</div>
+    <!-- contenu pieces cles visuels continue en flow -->
 
     <div class="two-images">
         <img src="{IMAGES['slip']}" alt="Slip dress">
@@ -791,11 +750,10 @@ def build_html():
             <tr><td>Veste cuir ajustee</td><td>Retour</td><td>Cuir agneau</td><td>80-200 EUR</td></tr>
         </table>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 16</div>
 </div>
 
-<!-- PAGE 17 : GUIDE STYLING -->
-<div class="page">
+<!-- GUIDE STYLING -->
+<div class="page chapter-start">
     <div class="page-header">07 &mdash; Guide Styling</div>
     <div class="section-number">Chapitre 07</div>
     <h2 class="section-title">Guide Styling &amp; Combinaisons</h2>
@@ -847,11 +805,10 @@ def build_html():
             <li><strong>Le duo star :</strong> blazer oversize + bermuda elegant</li>
         </ul>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 17</div>
 </div>
 
-<!-- PAGE 18 : SOURCES -->
-<div class="page">
+<!-- SOURCES -->
+<div class="page chapter-start">
     <div class="page-header">08 &mdash; Sources</div>
     <div class="section-number">Chapitre 08</div>
     <h2 class="section-title">Sources</h2>
@@ -903,7 +860,6 @@ def build_html():
         130+ sources professionnelles &bull; 5 agents de recherche paralleles<br>
         10 images generees par IA (FLUX.1-schnell, Black Forest Labs)</p>
     </div>
-    <div class="footer">Etude Tendances Mode Femme SS26 &mdash; Page 18</div>
 </div>
 
 </body></html>"""
@@ -923,7 +879,7 @@ async def generate_pdf():
             path=str(OUT_PDF),
             format="A4",
             print_background=True,
-            margin={"top": "0", "bottom": "0", "left": "0", "right": "0"},
+            prefer_css_page_size=True,
         )
         await browser.close()
     print(f"[OK] PDF genere : {OUT_PDF} ({OUT_PDF.stat().st_size / 1024:.0f} KB)")
